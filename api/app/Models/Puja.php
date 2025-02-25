@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Puja extends Model
+{
+    protected $table = 'pujas';
+    protected $fillable = ['precio', 'id_subasta', 'is_user'];
+
+}
