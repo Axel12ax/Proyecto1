@@ -19,14 +19,10 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             MarcasSeeder::class,
             CategorysSeeder::class,
-          
             VehiculosSeeder::class,
             ImgsSeeder::class,
-            PujasSeeder::class,
-
             SubastasSeeder::class,
-           
-         
+            PujasSeeder::class,
             VentasSeeder::class,
             VentasCarrosSeeder::class,
         ]);

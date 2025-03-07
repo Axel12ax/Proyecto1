@@ -17,6 +17,7 @@ class PujasSeeder extends Seeder
         'precio' => '10000',
         'id_user' => 1,
         'id_vehiculo' => 1,
+        
     ]);
 
      

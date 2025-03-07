@@ -15,9 +15,57 @@ class MarcasSeeder extends Seeder
     {
     DB::TABLE('marcas')->insert([
         'name' => 'Toyota',
+    ]);
+    DB::TABLE('marcas')->insert([
         'name' => 'Nissan',
+    ]);
+    DB::TABLE('marcas')->insert([
         'name' => 'Chevrolet',
-        'name' => 'Ford'
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Ford',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Honda',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Volkswagen',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Hyundai',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Kia',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Mazda',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Mercedes Benz',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'BMW',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Audi',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Jeep',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Subaru',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Mitsubishi',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Suzuki',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Volvo',
+    ]);
+    DB::TABLE('marcas')->insert([
+        'name' => 'Peugeot',
     ]);
       
     }

@@ -14,10 +14,30 @@ class CategorysSeeder extends Seeder
     {
        DB::table('categorys')->insert([
             'name' => 'SUV',
-            'name'=> 'Sedan',
-            'name'=> 'Hatchback',
-            'name'=> 'Pickup',
-            'name'=> 'Coupe',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Sedan',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Hatchback',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Pickup',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Coupe',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Convertible',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Minivan',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Van',
+        ]);
+        DB::table('categorys')->insert([
+            'name' => 'Truck',
         ]);
 
     }

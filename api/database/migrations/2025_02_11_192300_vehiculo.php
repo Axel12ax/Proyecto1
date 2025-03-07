@@ -22,11 +22,11 @@ return new class extends Migration
             $table->string('kilometros');
             $table->string('descripcion');
             $table->integer('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->integer('id_marca')->unsigned();
-            $table->foreign('id_marca')->references('id')->on('marcas');
+            $table->foreign('id_marca')->references('id')->on('marcas')->onDelete('cascade');
             $table->integer('id_categoria')->unsigned();
-            $table->foreign('id_categoria')->references('id')->on('categorys');
+            $table->foreign('id_categoria')->references('id')->on('categorys')->onDelete('cascade');
             $table->timestamps();
         } );
 
