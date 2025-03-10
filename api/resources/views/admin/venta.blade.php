@@ -31,9 +31,9 @@
     @foreach($ventas as $venta)
     <tr>
       <td>{{$venta->id}}</td>
-      <td>{{$venta->id_vehiculo}}</td>
+      <td>{{$venta->vehiculo->NSerie}}</td>
       <td>{{$venta->precio}}</td>
-      <td>{{$venta->id_user}}</td>
+      <td>{{$venta->user->name}}</td>
     </tr>
     @endforeach
   </tbody>

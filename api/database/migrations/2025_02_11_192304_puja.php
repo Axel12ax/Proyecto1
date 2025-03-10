@@ -17,7 +17,8 @@ return new class extends Migration
            $table->timestamps();
            $table->integer('id_vehiculo')->unsigned();
            $table->foreign('id_vehiculo')->references('id')->on('vehiculos')->onDelete('cascade');
-           
+           $table->integer('id_subasta')->unsigned();
+              $table->foreign('id_subasta')->references('id')->on('subasta')->onDelete('cascade');
            $table->integer('id_user')->unsigned();
            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
        } );

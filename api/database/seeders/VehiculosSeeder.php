@@ -28,5 +28,6 @@ class VehiculosSeeder extends Seeder
             
         ]);
 
+
     }
 }

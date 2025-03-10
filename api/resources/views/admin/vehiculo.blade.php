@@ -108,6 +108,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">Usuario</th>
       <th scope="col">Numero de Serie</th>
       <th scope="col">Marca</th>
       <th scope="col">Modelo</th>
@@ -125,11 +126,12 @@
    @foreach($vehiculos as $ve)
     <tr>
       <td>{{$ve->id}}</td>
+      <td>{{$ve->user->name}}</td>
       <td>{{$ve->NSerie}}
         
-      <td>{{$ve->id_marca}}</td>
+      <td>{{$ve->marca->name}}</td>
       <td>{{$ve->modelo}}</td>
-      <td>{{$ve->id_categoria}}</td>
+      <td>{{$ve->categoria->name}}</td>
      
       <td>{{$ve->color}}</td>
       <td>{{$ve->año}}</td>

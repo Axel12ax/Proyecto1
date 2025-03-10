@@ -11,8 +11,7 @@ class VehiculosController extends Controller
 {
     public function index()
     {
-        $vehiculos = Vehiculo::all();
-       // return view("admin.vehiculo")->with("vehiculos",$vehiculos);
+        $vehiculos = Vehiculo::with('user')->with('marca')->with('categoria')->get();
         $MARCA=Marca::all();
         $CATEGORIA=Category::all();
         return view('admin.vehiculo')->with('MARCA',$MARCA)->with('CATEGORIA',$CATEGORIA)->with("vehiculos", $vehiculos);

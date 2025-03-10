@@ -54,8 +54,22 @@
                   <p>Usuarios</p>
                 </a>
               </li>
+
               </li>
-           
+           <li class="nav-item">
+                <a href="{{url('/admin/products ')}}" class="nav-link">
+                <i class="bi bi-list-nested"></i>
+                  <p>Categorias y Marcas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/subasta ')}}" class="nav-link">
+                <i class="bi bi-list-nested"></i>
+                  <p>subasta</p>
+                </a>
+              </li>
+              
+              </li>
             </ul>
             <!--end::Sidebar Menu-->
           </nav>
