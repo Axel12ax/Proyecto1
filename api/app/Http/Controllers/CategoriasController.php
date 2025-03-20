@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
-use App\Models\Marca;
-use App\Models\img;
+
+
 
 use Illuminate\Http\Request;
 
@@ -11,8 +11,24 @@ class CategoriasController extends Controller
 {
     public function index(){
         $CATEGORIA=Category::all();
-        $MARCA=Marca::all();
             
-        return view("admin.products")->with("categorias",$CATEGORIA)->with("Marca",$MARCA);
+        return view("admin.products")->with("categorias",$CATEGORIA);
     }
+
+   public function createC(Request $request){
+        $categoria = new Category();
+        $categoria->nombre = $request->nombre;
+        $categoria->save();
+        return redirect("admin/products");
+    }
+
+    public function deleteC($id){
+        $categoria = Category::find($id);
+        $categoria->delete();
+        return redirect("admin/products")->with("mensaje","Categoria eliminada");
+    }
+
+    
+ 
+   
 }

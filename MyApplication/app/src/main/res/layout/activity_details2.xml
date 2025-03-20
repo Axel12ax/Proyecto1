@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/md_theme_inversePrimary"
+            app:expandedTitleMarginStart="16dp"
+            app:expandedTitleMarginEnd="16dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6">
+
+            <ImageView
+                android:id="@+id/imgCar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/sym_def_app_icon"
+                app:srcCompat="@drawable/car"
+                tools:srcCompat="@drawable/car" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@android:color/white" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/Marca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marca"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/material_dynamic_neutral0" />
+
+                <TextView
+                    android:id="@+id/Modelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo"
+                    android:paddingLeft="8dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/material_dynamic_neutral0" />
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2024"
+                    android:paddingLeft="8dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/material_dynamic_neutral0" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$100,000"
+                android:textSize="20sp"
+                android:textColor="@color/md_theme_inversePrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción del vehículo"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:paddingTop="8dp" />
+
+            <TextView
+                android:id="@+id/Ubicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ubicación"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:paddingTop="8dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerCar"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:clipToPadding="false"
+                android:clipChildren="false" />
+
+            <!-- Miniaturas -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerThumbnails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_thumbnail" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAsk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preguntar"
+                    app:cornerRadius="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comprar"
+                    app:cornerRadius="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reseñas"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/md_theme_inversePrimary"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

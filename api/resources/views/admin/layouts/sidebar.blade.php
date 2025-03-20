@@ -63,13 +63,20 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('/admin/subasta ')}}" class="nav-link">
+                <a href="{{url('/admin/subasta')}}" class="nav-link">
                 <i class="bi bi-list-nested"></i>
                   <p>subasta</p>
                 </a>
               </li>
-              
+             
+              <li class="nav-item">
+                <a href="{{url('admin/marca')}}" class="nav-link">
+                <i class="bi bi-list-nested"></i>
+                  <p>Marcas</p>
+                </a>
               </li>
+             
+              
             </ul>
             <!--end::Sidebar Menu-->
           </nav>
