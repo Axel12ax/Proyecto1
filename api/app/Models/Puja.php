@@ -11,7 +11,7 @@ class Puja extends Model
 
     public function subasta()
     {
-        return $this->hasOne(Subasta::class,'id', 'id_vehiculo');
+        return $this->hasOne(Subasta::class,'id', 'id_subasta');
     }
     public function user()
     {

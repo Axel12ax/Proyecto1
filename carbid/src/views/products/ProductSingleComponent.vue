@@ -3,299 +3,230 @@
 
        
         <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
-            <div class="container">
-                <div class="row gx-0 align-items-center" style="height: 45px;">
-                    <div class="col-lg-6 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                            <a href="tel:+01234567890" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                            <a href="mailto:example@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <TopbarComponent/>
         <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="" class="navbar-brand p-0">
-                        <h1 class="display-6 text-primary"><i class="fas fa-car-alt me-3"></i>Cental</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Service</a>
-                            <a href="blog.html" class="nav-item nav-link">Blog</a>
-                            
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                    <a href="cars.html" class="dropdown-item">Our Cars</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
+     <HeaderComponent/>
+
+        <!-- Vehicle Detail Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <!-- Main Vehicle Info -->
+        <div class="row g-5">
+            <!-- Image Gallery -->
+            <div class="col-lg-7">
+                <div class="vehicle-gallery">
+                    <div id="vehicleCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="@/plantilla/img/car-1.png" class="d-block w-100" alt="Vehículo">
                             </div>
-                            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                            <div class="carousel-item">
+                                <img src="@/plantilla/img/car-1.png" class="d-block w-100" alt="Interior">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@/plantilla/img/car-1.png" class="d-block w-100" alt="Motor">
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Get Started</a>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
                     </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
-                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Contact</li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h1 class="display-5 text-capitalize text-primary mb-3">Contact Us</h1>
-                    <p class="mb-0">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a class="text-primary fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-3">
+                            <img src="@/plantilla/img/car-1.png" class="img-thumbnail" onclick="changeSlide(0)" style="cursor: pointer">
+                        </div>
+                        <div class="col-3">
+                            <img src="@/plantilla/img/car-1.png" class="img-thumbnail" onclick="changeSlide(1)" style="cursor: pointer">
+                        </div>
+                        <div class="col-3">
+                            <img src="@/plantilla/img/car-1.png" class="img-thumbnail" onclick="changeSlide(2)" style="cursor: pointer">
+                        </div>
+                        <div class="col-3">
+                            <img src="@/plantilla/img/car-1.png" class="img-thumbnail" onclick="changeSlide(3)" style="cursor: pointer">
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-5">
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="row g-5">
-                            <div class="col-md-6 col-lg-6 col-xl-3">
-                                <div class="contact-add-item p-4">
-                                    <div class="contact-icon mb-4">
-                                        <i class="fas fa-map-marker-alt fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h4>Address</h4>
-                                        <p class="mb-0">123 Street New York.USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="contact-add-item p-4">
-                                    <div class="contact-icon mb-4">
-                                        <i class="fas fa-envelope fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h4>Mail Us</h4>
-                                        <p class="mb-0">info@example.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="contact-add-item p-4">
-                                    <div class="contact-icon mb-4">
-                                        <i class="fa fa-phone-alt fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h4>Telephone</h4>
-                                        <p class="mb-0">(+012) 3456 7890</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="contact-add-item p-4">
-                                    <div class="contact-icon mb-4">
-                                        <i class="fab fa-firefox-browser fa-2x"></i>
-                                    </div>
-                                    <div>
-                                        <h4>Yoursite@ex.com</h4>
-                                        <p class="mb-0">(+012) 3456 7890</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="bg-secondary p-5 rounded">
-                            <h4 class="text-primary mb-4">Send Your Message</h4>
-                            <form>
-                                <div class="row g-4">
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                            <label for="phone">Your Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="project" placeholder="Project">
-                                            <label for="project">Your Project</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
 
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-light w-100 py-3">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div> 
-                    <div class="col-12 col-xl-1 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="d-flex flex-xl-column align-items-center justify-content-center">
-                            <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-4 me-4 me-xl-0" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-xl-square btn-light rounded-circle mb-0 mb-xl-0 me-0 me-xl-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                <!-- Specifications -->
+                <div class="mt-5">
+                    <h3 class="mb-4">Especificaciones Técnicas</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Marca</th>
+                                    <td>Toyota</td>
+                                    <th>Modelo</th>
+                                    <td>Corolla</td>
+                                </tr>
+                                <tr>
+                                    <th>Año</th>
+                                    <td>2022</td>
+                                    <th>Kilometraje</th>
+                                    <td>25,000 km</td>
+                                </tr>
+                                <tr>
+                                    <th>Transmisión</th>
+                                    <td>Automática</td>
+                                    <th>Combustible</th>
+                                    <td>Híbrido</td>
+                                </tr>
+                                <tr>
+                                    <th>Color</th>
+                                    <td>Blanco Perlado</td>
+                                    <th>Puertas</th>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-12 col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="p-5 bg-light rounded">
-                            <div class="bg-white rounded p-4 mb-4">
-                                <h4 class="mb-3">Our Branch 01</h4>
-                                <div class="d-flex align-items-center flex-shrink-0 mb-3">
-                                    <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded p-4 mb-4">
-                                <h4 class="mb-3">Our Branch 02</h4>
-                                <div class="d-flex align-items-center mb-3">
-                                    <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded p-4 mb-0">
-                                <h4 class="mb-3">Our Branch 03</h4>
-                                <div class="d-flex align-items-center mb-3">
-                                    <p class="mb-0 text-dark me-2">Address:</p><i class="fas fa-map-marker-alt text-primary me-2"></i><p class="mb-0">123 Street New York.USA</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <p class="mb-0 text-dark me-2">Telephone:</p><i class="fa fa-phone-alt text-primary me-2"></i><p class="mb-0">(+012) 3456 7890</p>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Vehicle Details -->
+            <div class="col-lg-5">
+                <div class="vehicle-details bg-light p-4 rounded">
+                    <h1 class="mb-3">Toyota Corolla 2022</h1>
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="text-success me-3">$25,999</h2>
+                        <del class="text-muted">$27,500</del>
                     </div>
-                    <div class="col-12">
-                        <div class="rounded">
-                            <iframe class="rounded w-100" 
-                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <!-- Key Features -->
+                    <div class="mb-4">
+                        <h4 class="mb-3">Características Principales</h4>
+                        <div class="row">
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Cámara de reversa
+                            </div>
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Control crucero
+                            </div>
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Bluetooth
+                            </div>
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Airbags laterales
+                            </div>
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Aire acondicionado
+                            </div>
+                            <div class="col-6 mb-2">
+                                <i class="fa fa-check text-success me-2"></i> Sensores de estacionamiento
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h4 class="mb-3">Solicitar Información</h4>
+                        <form id="vehicleContactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Teléfono" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletterCheck">
+                                <label class="form-check-label" for="newsletterCheck">Deseo recibir ofertas especiales</label>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 py-2">Enviar Consulta</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-white mb-4">About Us</h4>
-                                <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="position-relative">
-                                <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-secondary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">Subscribe</button>
-                            </div>
+        <!-- Additional Info -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Descripción Detallada</h3>
+                <p class="lead">Este Toyota Corolla 2022 en excelente estado cuenta con:</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-check text-success me-2"></i> Mantenimiento al día en agencia autorizada</li>
+                    <li><i class="fa fa-check text-success me-2"></i> Único dueño</li>
+                    <li><i class="fa fa-check text-success me-2"></i> Garantía extendida de 12 meses</li>
+                    <li><i class="fa fa-check text-success me-2"></i> Llantas nuevas</li>
+                    <li><i class="fa fa-check text-success me-2"></i> Historial de servicio completo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Especificaciones Técnicas Completas</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="spec-item mb-3">
+                            <h5>Motor</h5>
+                            <p>1.8L 4 cilindros híbrido - 121 HP</p>
+                        </div>
+                        <div class="spec-item mb-3">
+                            <h5>Consumo de Combustible</h5>
+                            <p>22 km/L (ciudad) - 25 km/L (carretera)</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Cars</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Car Types</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Team</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                    <div class="col-md-6">
+                        <div class="spec-item mb-3">
+                            <h5>Seguridad</h5>
+                            <p>Sistema Toyota Safety Sense 2.0</p>
+                        </div>
+                        <div class="spec-item mb-3">
+                            <h5>Dimensiones</h5>
+                            <p>Largo: 4,630mm - Ancho: 1,780mm</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Business Hours</h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Mon - Friday:</h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Saturday:</h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Vacation:</h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href="#"><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href="mailto:info@example.com"><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href="tel:+012 345 67890"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="tel:+012 345 67890" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex">
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-twitter text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotional Banner -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="promo-banner bg-success text-white p-5 rounded text-center">
+                    <h2 class="mb-3">¡Financiamiento Disponible!</h2>
+                    <p class="mb-4">Desde $1,200/mes con enganche del 20%</p>
+                    <button class="btn btn-light btn-lg">Calcular Cuota</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Vehicles -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Vehículos Similares</h3>
+                <div class="row g-4">
+                    <!-- Related Vehicle Items (repetir según necesario) -->
+                    <div class="col-md-4">
+                        <div class="related-vehicle card h-100">
+                            <img src="@/plantilla/img/car-1.png" class="card-img-top" alt="Vehículo relacionado">
+                            <div class="card-body">
+                                <h5 class="card-title">Honda Civic 2021</h5>
+                                <p class="card-text">$23,999</p>
+                                <a href="#" class="btn btn-outline-success">Ver Detalles</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+</div>
+<!-- Vehicle Detail End -->
+
+     <FooterComponent/>
         
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
@@ -315,8 +246,18 @@
         </div>
         <!-- Copyright End -->
 </template>
+
 <script>
+import HeaderComponent from '@/shared/HeaderComponent.vue';
+import FooterComponent from '@/shared/FooterComponent.vue';
+import TopbarComponent from '@/shared/TopbarComponent.vue';
 export default {
 name: 'ProductSingleComponent',
+components: {
+    HeaderComponent,
+    FooterComponent,
+    TopbarComponent
+}
+
 }
 </script>

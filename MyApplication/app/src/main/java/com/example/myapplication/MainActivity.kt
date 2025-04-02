@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 val imgBid = findViewById<ImageView>(R.id.imgBid)
-//val animation = AnimationUtils.loadAnimation(this, R.anim.anim_rot)
-//animation.duration=2000
-  //      imgBid.startAnimation(animation)
+val animation = AnimationUtils.loadAnimation(this, R.anim.anim_rota)
+animation.duration=2000
+      imgBid.startAnimation(animation)
         val btnLog = findViewById<Button>(R.id.btnLog)
         btnLog.setOnClickListener {
-            val intent = Intent(applicationContext, Principal::class.java)
+            val intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
         }
 

@@ -140,4 +140,9 @@
     <color name="md_theme_surfaceContainer_highContrast">#312F36</color>
     <color name="md_theme_surfaceContainerHigh_highContrast">#3C3A41</color>
     <color name="md_theme_surfaceContainerHighest_highContrast">#48464C</color>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CarBid" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
 </resources>

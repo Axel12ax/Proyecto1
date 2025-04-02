@@ -18,6 +18,9 @@ class Subasta extends Model
     {
         return $this->hasOne(vehiculo::class,'id', 'id_vehiculo');
     }
+   
+  
+
   
     
 }

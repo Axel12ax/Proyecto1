@@ -16,7 +16,6 @@ class PujasSeeder extends Seeder
     DB::table('pujas')->insert([
         'precio' => '10000',
         'id_user' => 1,
-        'id_vehiculo' => 1,
         'id_subasta' => 1
         
     ]);
